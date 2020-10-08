@@ -1,0 +1,30 @@
+{
+  "name": "ivcs-server",
+  "version": "1.0.0",
+  "description": "Instant Video Conferencing Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-modules app.mjs",
+    "test": "nodemon app.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IVCS/ivcs-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IVCS/ivcs-server/issues"
+  },
+  "homepage": "https://github.com/IVCS/ivcs-server#readme",
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
