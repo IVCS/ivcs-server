@@ -26,7 +26,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09dfcdd5-49b4-4a51-9ac0-3dc37fbea220" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +44,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iVNNcd7O11JOKnpU2soqjXJYBB" />
@@ -65,6 +73,11 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.test">
     <configuration default="true" type="js.build_tools.npm">
@@ -105,7 +118,8 @@
       <workItem from="1602069228624" duration="7088000" />
       <workItem from="1602122851029" duration="2048000" />
       <workItem from="1602127620046" duration="12036000" />
-      <workItem from="1602328428556" duration="456000" />
+      <workItem from="1602328428556" duration="3239000" />
+      <workItem from="1602332029208" duration="20684000" />
     </task>
     <task id="LOCAL-00001" summary="Update .gitignore">
       <created>1601988808171</created>
@@ -114,7 +128,28 @@
       <option name="project" value="LOCAL" />
       <updated>1601988808171</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create multi-user branch">
+      <created>1602329434403</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602329434403</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Debug multi-user video conference function">
+      <created>1602359464652</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602359464652</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add MeetingRoom and MeetingRoomList classes">
+      <created>1602359507803</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602359507803</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,32 +181,47 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore" />
+    <MESSAGE value="Create multi-user branch" />
+    <MESSAGE value="Debug multi-user video conference function" />
+    <MESSAGE value="Add MeetingRoom and MeetingRoomList classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add MeetingRoom and MeetingRoomList classes" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="593" y="-641" key="#ESLint" timestamp="1602331844613">
+      <screen x="-229" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="593" y="-641" key="#ESLint/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602331844613" />
     <state x="195" y="-878" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601989279894">
       <screen x="-229" y="-1080" width="1920" height="1080" />
     </state>
     <state x="195" y="-878" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1601989279894" />
-    <state width="1899" height="305" key="GridCell.Tab.0.bottom" timestamp="1602163509775">
+    <state width="1899" height="251" key="GridCell.Tab.0.bottom" timestamp="1602358251362">
       <screen x="-229" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1899" height="305" key="GridCell.Tab.0.bottom/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602163509775" />
-    <state width="1899" height="305" key="GridCell.Tab.0.center" timestamp="1602163509772">
+    <state width="1899" height="251" key="GridCell.Tab.0.bottom/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602358251362" />
+    <state width="1899" height="251" key="GridCell.Tab.0.bottom/0.23.1440.795/-229.-1057.1920.1057@-229.-1057.1920.1057" timestamp="1602355044927" />
+    <state width="1899" height="251" key="GridCell.Tab.0.center" timestamp="1602358251360">
       <screen x="-229" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1899" height="305" key="GridCell.Tab.0.center/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602163509772" />
-    <state width="1899" height="305" key="GridCell.Tab.0.left" timestamp="1602163509768">
+    <state width="1899" height="251" key="GridCell.Tab.0.center/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602358251360" />
+    <state width="1899" height="251" key="GridCell.Tab.0.center/0.23.1440.795/-229.-1057.1920.1057@-229.-1057.1920.1057" timestamp="1602355044925" />
+    <state width="1899" height="251" key="GridCell.Tab.0.left" timestamp="1602358251359">
       <screen x="-229" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1899" height="305" key="GridCell.Tab.0.left/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602163509768" />
-    <state width="1899" height="305" key="GridCell.Tab.0.right" timestamp="1602163509774">
+    <state width="1899" height="251" key="GridCell.Tab.0.left/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602358251359" />
+    <state width="1899" height="251" key="GridCell.Tab.0.left/0.23.1440.795/-229.-1057.1920.1057@-229.-1057.1920.1057" timestamp="1602355044922" />
+    <state width="1899" height="251" key="GridCell.Tab.0.right" timestamp="1602358251361">
       <screen x="-229" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1899" height="305" key="GridCell.Tab.0.right/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602163509774" />
+    <state width="1899" height="251" key="GridCell.Tab.0.right/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602358251361" />
+    <state width="1899" height="251" key="GridCell.Tab.0.right/0.23.1440.795/-229.-1057.1920.1057@-229.-1057.1920.1057" timestamp="1602355044926" />
     <state x="232" y="-901" key="SettingsEditor" timestamp="1602071425775">
       <screen x="-229" y="-1080" width="1920" height="1080" />
     </state>
     <state x="232" y="-901" key="SettingsEditor/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602071425775" />
+    <state x="396" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1602342760565">
+      <screen x="-229" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="396" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-229.-1080.1920.1080@-229.-1080.1920.1080" timestamp="1602342760565" />
   </component>
 </project>
