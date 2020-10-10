@@ -16,7 +16,13 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:dev" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09dfcdd5-49b4-4a51-9ac0-3dc37fbea220" name="Default Changelist" comment="">
@@ -99,6 +105,7 @@
       <workItem from="1602069228624" duration="7088000" />
       <workItem from="1602122851029" duration="2048000" />
       <workItem from="1602127620046" duration="12036000" />
+      <workItem from="1602328428556" duration="456000" />
     </task>
     <task id="LOCAL-00001" summary="Update .gitignore">
       <created>1601988808171</created>
@@ -118,7 +125,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
