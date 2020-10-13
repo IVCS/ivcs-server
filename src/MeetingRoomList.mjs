@@ -5,12 +5,12 @@ export default class MeetingRoomList {
     this.roomList = {};
   }
 
-  addRoom = (roomId, username) => {
+  addRoom = (roomId, userId, username) => {
     if (roomId in this.roomList) {
-      this.roomList[roomId].addUser(username);
+      this.roomList[roomId].addUser(userId, username);
     } else {
       const room = new MeetingRoom(roomId);
-      room.addUser(username);
+      room.addUser(userId, username);
       this.roomList[roomId] = room;
     }
   }

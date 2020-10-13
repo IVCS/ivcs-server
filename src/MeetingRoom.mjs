@@ -4,9 +4,12 @@ export default class MeetingRoom {
     this.userList = [];
   }
 
-  addUser = (username) => {
-    if (!this.userList.includes(username)) {
-      this.userList.push(username);
+  addUser = (userId, username) => {
+    if (!this.userList.includes(userId)) {
+      this.userList.push({
+        'userId': userId,
+        'username': username,
+      });
     }
   }
 

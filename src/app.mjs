@@ -22,21 +22,34 @@ app.use(express.static(publicDirectoryPath));
 const meetingRoomList = new MeetingRoomList();
 
 io.on('connection', (socket) => {
-  socket.on('join room', (roomId, username) => {
-    meetingRoomList.addRoom(roomId, username);
-    console.log('roomId, username: ', roomId, username);
-    console.log('class test: ', meetingRoomList.getUserList(roomId));
+  socket.on('join room', (roomId, userId, username) => {
+    meetingRoomList.addRoom(roomId, userId, username);
     socket.join(roomId, () => {
-      socket.emit('user joined', username, meetingRoomList.getUserList(roomId));
-      socket.to(roomId)
-          .emit('user joined', username, meetingRoomList.getUserList(roomId));
+      socket.emit('user joined', userId, username,
+          meetingRoomList.getUserList(roomId));
+      socket.to(roomId).emit('user joined', userId, username,
+          meetingRoomList.getUserList(roomId));
     });
   });
 
   socket.on('signal from client', (data) => {
     const signal = JSON.parse(data);
-    socket.to(signal.roomId).emit('signal from server', data);
-    console.log('room name: ', signal.roomId);
+
+    socket.to(signal.destUserId).emit('signal from server', data);
+
+    if (signal.type === 'ICE') {
+      console.log('---------------------');
+      console.log('Got ICE: ', signal.message.type);
+      console.log('From: ', signal.username);
+      console.log('---------------------');
+    }
+
+    // if (signal.type === 'SDP') {
+    //   console.log('---------------------');
+    //   console.log('Got sdp: ', signal.message.type);
+    //   console.log('From: ', signal.username);
+    //   console.log('---------------------');
+    // }
   });
 });
 
