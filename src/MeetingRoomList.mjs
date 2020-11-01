@@ -19,6 +19,21 @@ export default class MeetingRoomList {
     return this.roomList[roomId].getUserList();
   }
 
+  getRoomId = (userId) => {
+    let roomId = null;
+    Object.values(this.roomList).forEach((v) => {
+      console.log(v.userList);
+      console.log('search user id ', userId);
+      v.userList.forEach((u)=>{
+        if (u.userId === userId) {
+          roomId = v.roomId;
+          return;
+        }
+      });
+    });
+    return roomId;
+  }
+
   printRoomList = () => {
     console.log(this.roomList);
   }

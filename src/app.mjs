@@ -34,22 +34,14 @@ io.on('connection', (socket) => {
 
   socket.on('signal from client', (data) => {
     const signal = JSON.parse(data);
-
     socket.to(signal.destUserId).emit('signal from server', data);
+  });
 
-    if (signal.type === 'ICE') {
-      console.log('---------------------');
-      console.log('Got ICE: ', signal.message.type);
-      console.log('From: ', signal.username);
-      console.log('---------------------');
-    }
-
-    // if (signal.type === 'SDP') {
-    //   console.log('---------------------');
-    //   console.log('Got sdp: ', signal.message.type);
-    //   console.log('From: ', signal.username);
-    //   console.log('---------------------');
-    // }
+  socket.on('disconnect', () => {
+    const userId = socket.id;
+    const roomId = meetingRoomList.getRoomId(userId);
+    console.log('roomid, userid', roomId, userId);
+    socket.to(roomId).emit('user left', userId);
   });
 });
 
