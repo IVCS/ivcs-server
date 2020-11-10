@@ -6,7 +6,7 @@ import express from 'express';
 import http from 'http';
 import socketio from 'socket.io';
 
-import MeetingRoomList from './MeetingRoomList.mjs';
+import MeetingRoomManager from './MeetingRoomManager.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const publicDirectoryPath = path.join(__dirname, '../../ivcs-web/public');
@@ -19,16 +19,16 @@ const io = socketio(server);
 const port = process.env.PORT || 3001;
 app.use(express.static(publicDirectoryPath));
 
-const meetingRoomList = new MeetingRoomList();
+const meetingRoomManager = new MeetingRoomManager();
 
 io.on('connection', (socket) => {
   socket.on('join room', (roomId, userId, username) => {
-    meetingRoomList.addRoom(roomId, userId, username);
+    meetingRoomManager.addRoom(roomId, userId, username);
     socket.join(roomId, () => {
       socket.emit('user joined', userId, username,
-          meetingRoomList.getUserList(roomId));
+          meetingRoomManager.getUserList(roomId));
       socket.to(roomId).emit('user joined', userId, username,
-          meetingRoomList.getUserList(roomId));
+          meetingRoomManager.getUserList(roomId));
     });
   });
 
@@ -39,9 +39,10 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     const userId = socket.id;
-    const roomId = meetingRoomList.getRoomId(userId);
-    console.log('roomid, userid', roomId, userId);
+    const roomId = meetingRoomManager.getRoomId(userId);
     socket.to(roomId).emit('user left', userId);
+    // If the number of users in the room is 0, remove the room.
+    meetingRoomManager.removeRoom(roomId, userId);
   });
 });
 
