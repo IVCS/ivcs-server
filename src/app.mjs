@@ -5,6 +5,7 @@ import {fileURLToPath} from 'url';
 import express from 'express';
 import http from 'http';
 import socketio from 'socket.io';
+import chalk from 'chalk';
 
 import MeetingRoomManager from './MeetingRoomManager.mjs';
 
@@ -35,6 +36,12 @@ io.on('connection', (socket) => {
   socket.on('signal from client', (data) => {
     const signal = JSON.parse(data);
     socket.to(signal.destUserId).emit('signal from server', data);
+  });
+
+  socket.on('text message', (roomId, username, inputMessage) => {
+    console.log(chalk.underline.blue('[%s] %s: %s.'),
+        roomId, username, inputMessage);
+    socket.to(roomId).emit('text message', username, inputMessage);
   });
 
   socket.on('disconnect', () => {
